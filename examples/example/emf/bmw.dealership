@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dealership:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dealership="http://www.example.org/dealership" manufacturer="BMW">
+  <specifications model="3 Series" cylinders="4" fuel="Hybrid"/>
+  <specifications model="5 Series" cylinders="6"/>
+  <specifications model="8 Series" cylinders="6"/>
+</dealership:Library>

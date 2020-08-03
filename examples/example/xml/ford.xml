@@ -1,0 +1,4 @@
+<catalogue name="Ford">
+<spec fuel="Petrol" model="Fiesta" cylinders="3" />
+<spec fuel="Hybrid" model="Focus" cylinders="4" />
+</catalogue>

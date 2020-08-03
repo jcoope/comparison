@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dealership:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dealership="http://www.example.org/dealership" manufacturer="VW">
+  <specifications model="Polo" cylinders="3"/>
+  <specifications model="Golf" cylinders="4" fuel="Hybrid"/>
+  <specifications model="E-Golf" cylinders="4" fuel="Electric"/>
+</dealership:Library>

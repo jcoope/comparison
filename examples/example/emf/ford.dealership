@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dealership:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dealership="http://www.example.org/dealership" manufacturer="Ford">
+  <specifications model="Fiesta" cylinders="3"/>
+  <specifications model="Focus" cylinders="4" fuel="Hybrid"/>
+</dealership:Library>
