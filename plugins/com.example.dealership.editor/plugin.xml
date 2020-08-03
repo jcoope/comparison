@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dealership -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.example.dealership.presentation.DealershipModelWizardID"
+            name="%_UI_DealershipModelWizard_label"
+            class="com.example.dealership.presentation.DealershipModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DealershipModelFile.gif">
+         <description>%_UI_DealershipModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dealership -->
+      <editor
+            id="com.example.dealership.presentation.DealershipEditorID"
+            name="%_UI_DealershipEditor_label"
+            icon="icons/full/obj16/DealershipModelFile.gif"
+            extensions="dealership"
+            class="com.example.dealership.presentation.DealershipEditor"
+            contributorClass="com.example.dealership.presentation.DealershipActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,5 @@
+<catalogue name="VW">
+<spec fuel="Petrol" model="Polo" cylinders="3" />
+<spec fuel="Hybrid" model="Golf" cylinders="4" />
+<spec fuel="Electric" model="E-Golf" cylinders="4" />
+</catalogue>

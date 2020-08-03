@@ -1,0 +1,14 @@
+context M!Library {
+	constraint HasMatch {
+		check{
+			for (matchTrace in matchTraces){
+				if ((matchTrace.getMatch(self) <> null) and (matchTrace.getMatch(self).size() > 0)){
+					return true;
+				}
+			}
+			return false;
+		} 
+		message: "No match found in " + self 
+	}
+}
+

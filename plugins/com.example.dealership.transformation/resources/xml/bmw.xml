@@ -1,0 +1,5 @@
+<catalogue name="BMW">
+<spec fuel="Hybrid" model="3 Series" cylinders="4" />
+<spec fuel="Petrol" model="5 Series" cylinders="6" />
+<spec fuel="Petrol" model="8 Series" cylinders="6" />
+</catalogue>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dealership:Dealership xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dealership="http://www.example.org/dealership" xmi:id="_ERlMANVyEeqhiY4Snc-7Hw">
+  <libraries href="libraries/audi.model#/"/>
+  <libraries href="libraries/bmw.model#/"/>
+  <libraries href="libraries/vw.model#/"/>
+</dealership:Dealership>

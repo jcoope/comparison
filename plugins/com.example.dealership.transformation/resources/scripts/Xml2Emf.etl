@@ -1,0 +1,24 @@
+rule catalogue transform s:X!t_Catalogue to t:N!Library {
+	t.manufacturer = s.a_name;
+	for (spec in s.children.equivalent()){
+		t.specifications.add(spec);
+	}
+}
+
+rule specification transform s:X!t_Spec to t:N!Specification{
+	t.`model` = s.a_model;
+	t.cylinders = Native("java.lang.Integer").parseInt(s.a_cylinders);
+	if (s.a_fuel.equals("Petrol")){
+		t.fuel = M!FuelType#Petrol;
+	} else if (s.a_fuel.equals("Diesel")){
+		t.fuel = M!FuelType#Diesel;
+	} else if (s.a_fuel.equals("Hybrid")){
+		t.fuel = M!FuelType#Hybrid;
+	} else if (s.a_fuel.equals("Electric")){
+		t.fuel = M!FuelType#Electric;
+	}
+}
+
+post {
+	M!Dealership.all.first().libraries.addAll(N!Library.all);
+}
