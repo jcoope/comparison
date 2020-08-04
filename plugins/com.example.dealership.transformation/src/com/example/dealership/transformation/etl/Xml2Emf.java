@@ -1,14 +1,7 @@
 package com.example.dealership.transformation.etl;
 
-import java.io.File;
-import java.net.URL;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.FileLocator;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.Platform;
 import org.eclipse.epsilon.emc.emf.EmfModel;
 import org.eclipse.epsilon.emc.plainxml.PlainXmlModel;
 import org.eclipse.epsilon.eol.EolModule;
@@ -16,6 +9,7 @@ import org.eclipse.epsilon.etl.EtlModule;
 
 import com.example.dealership.DealershipPackage;
 import com.example.dealership.transformation.util.EpsilonUtil;
+import com.example.dealership.transformation.util.FileUtil2;
 
 public class Xml2Emf {
 	
@@ -27,7 +21,7 @@ public class Xml2Emf {
 	
 	public void run() throws Exception {
 		cleanModel();
-		for (IResource f : getXmlModels()) {
+		for (IResource f : FileUtil2.getXmlModels(file)) {
 			EmfModel dealership = EpsilonUtil.getEmfModel("M", DealershipPackage.eINSTANCE.getNsURI(),
 					file.getLocation().toOSString(), true, true);
 			EmfModel library = EpsilonUtil.getEmfModel("N", DealershipPackage.eINSTANCE.getNsURI(),
@@ -37,14 +31,10 @@ public class Xml2Emf {
 		}
 	}
 
-	private IResource[] getXmlModels() throws CoreException{
-		return file.getProject().getFolder("xml").members();
-	}
-	
+
 	private void runEtl(EmfModel dealership, EmfModel libraryModel, PlainXmlModel xmlCatalogue) throws Exception {		
 		EtlModule m = new EtlModule();
-		URL url = FileLocator.find(Platform.getBundle("com.example.dealership.transformation"), new Path("resources/scripts/Xml2Emf.etl"));
-		m.parse(url);
+		m.parse(EpsilonUtil.path2URL("resources/scripts/Xml2Emf.etl"));
 		if (!m.getParseProblems().isEmpty()) {
 			System.err.println("Parse Problems. Exiting...");
 		}

@@ -1,3 +1,10 @@
+pre {
+	var comparison = new Native("com.example.dealership.transformation.ecl.XmlEmfComparison");
+	comparison.setModel(M); 
+	var matchTraces = comparison.compareXmlEmf();
+}
+
+
 context M!Library {
 	constraint HasMatch {
 		check{
@@ -8,7 +15,7 @@ context M!Library {
 			}
 			return false;
 		} 
-		message: "No match found in " + self 
+		message: "No match found for " + self 
 	}
 }
 

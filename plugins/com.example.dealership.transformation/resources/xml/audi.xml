@@ -1,5 +1,0 @@
-<catalogue name="Audi">
-<spec fuel="Petrol" model="A1" cylinders="3" />
-<spec fuel="Petrol" model="A3" cylinders="4" />
-<spec fuel="Diesel" model="A4" cylinders="4" />
-</catalogue>

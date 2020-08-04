@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<dealership:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dealership="http://www.example.org/dealership" xmi:id="_fLzXINW8EeqhiY4Snc-7Hw" manufacturer="VW2">
-  <specifications xmi:id="_fLzXIdW8EeqhiY4Snc-7Hw" model="Polo" cylinders="3"/>
-  <specifications xmi:id="_fLz-MNW8EeqhiY4Snc-7Hw" model="Golf" cylinders="4" fuel="Hybrid"/>
-  <specifications xmi:id="_fLz-MdW8EeqhiY4Snc-7Hw" model="E-Golf" cylinders="4" fuel="Electric"/>
-</dealership:Library>
